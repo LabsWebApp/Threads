@@ -8,7 +8,11 @@ Thread.Sleep(100);
 Console.WriteLine($"2. counter = {counter}");
 
 // ParameterizedThreadStart
-thread = new Thread((object argument) => { Console.WriteLine($"3. counter = {(int)argument}"); });
+thread = new Thread(argument =>
+{
+    if (argument == null) throw new ArgumentNullException(nameof(argument));
+    Console.WriteLine($"3. counter = {(int)argument}");
+});
 thread.Start(counter);
 
 // Delay.

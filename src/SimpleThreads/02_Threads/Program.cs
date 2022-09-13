@@ -17,6 +17,7 @@ static void WriteSecond()
 Thread thread = new Thread(WriteSecond);
 thread.Start();
 
+
 // Работа первичного потока.
 WriteSecond();
 

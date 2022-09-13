@@ -11,7 +11,7 @@
 
     for (int counter = 0; counter < 10; counter++)
     {
-        Console.WriteLine(new string(' ', 15) + thread.Name + " " + counter);
+        Console.WriteLine($"{new string(' ', 15)}{thread.Name} {counter}");
         // Приостанавливаем выполнение текущего потока.
         Thread.Sleep(1000);
     }
