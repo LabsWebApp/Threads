@@ -12,7 +12,7 @@ class Program
     // Будет запускаться в отдельном потоке.
     static void Function()
     {
-        //using (new SpinLockManager(Block)) // Вызывается block.Enter();
+        using (new SpinLockManager(Block)) // Вызывается block.Enter();
         {
             Writer.WriteLine($"Поток {Thread.CurrentThread.ManagedThreadId} запускается.");
             Writer.Flush(); // Очищает буфер writer и записывает данные в файл.

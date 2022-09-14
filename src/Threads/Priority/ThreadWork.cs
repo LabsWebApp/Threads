@@ -2,7 +2,7 @@
 
 internal class ThreadWork
 {
-    private const long MaxCount = 2000000;
+    private const long MaxCount = 20000000;
 
     public readonly Thread RunThread;
     private static bool _stop;

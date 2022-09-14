@@ -1,9 +1,9 @@
-﻿namespace _03_Recursion;
+﻿namespace JoinRecursion;
 
 class Program
 {
     // Общая переменная счетчик.
-    [ThreadStatic] //TODO Снять комментарий
+    //[ThreadStatic] //TODO Снять комментарий
     public static int Counter;
 
     // Рекурсивный запуск потоков.
@@ -13,9 +13,10 @@ class Program
         {
             Counter++; // Увеличение счетчика вызванных методов.
             Console.WriteLine($"{Counter} - СТАРТ --- {Thread.CurrentThread.GetHashCode()}");
+            Thread.Sleep(10);
             var thread = new Thread(Method);
             thread.Start();
-            thread.Join(); //TODO Комментарий        
+            //thread.Join(); //TODO Комментарий        
         }
 
         Console.WriteLine($"Поток {Thread.CurrentThread.GetHashCode()} завершился.");
