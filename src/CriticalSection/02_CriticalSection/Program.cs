@@ -27,7 +27,7 @@ class MainClass
         int hash = Thread.CurrentThread.GetHashCode();
         Console.WriteLine("Hi");
 
-        //Monitor.Enter(block); // комментировать.
+        Monitor.Enter(block); // комментировать.
 
         for (int counter = 0; counter < 10; counter++)
         {

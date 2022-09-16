@@ -17,11 +17,11 @@ Thread[] threads = { new(Function), new(Function), new(Function), new(Function),
 
 for (var i = 0; i < threads.Length; i++)
 {
-    threads[i].Name = (++i).ToString();
+    threads[i].Name = (i + 1).ToString();
     threads[i].Start();
 }
 
-Thread.Sleep(2000);
+Thread.Sleep(5000);
 slim.Release();  // Возможен принудительный сброс из потока владельца семафора.
 
 // Delay.
