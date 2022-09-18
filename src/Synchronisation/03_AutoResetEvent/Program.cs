@@ -1,5 +1,5 @@
 ﻿// AutoResetEvent - Уведомляет ожидающий поток о том, что произошло событие. 
-using AutoResetEvent auto = new AutoResetEvent(false);
+using AutoResetEvent auto = new AutoResetEvent(true);
 
 void Function()
 {

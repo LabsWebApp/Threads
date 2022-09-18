@@ -18,6 +18,8 @@ internal class AutoResetEventSample : IDisposable
         _autoReset.Set();
         Thread.Sleep(1000);
         _autoReset.Set();
+        Thread.Sleep(1000);
+        _autoReset.Set();
         Console.WriteLine("Основной поток дошел до конца.");
     }
 

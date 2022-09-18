@@ -1,6 +1,6 @@
 ﻿// Рекурсивное запирание.
 
-var instance = new SomeClass();
+using SomeClass instance = new ();
 
 var thread = new Thread(instance.Method1);
 thread.Start();

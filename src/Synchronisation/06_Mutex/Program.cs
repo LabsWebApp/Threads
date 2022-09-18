@@ -14,9 +14,9 @@ void UseResource()
 
     mutex.ReleaseMutex();  // Освобождение Mutex.
 
-    //Console.WriteLine($"------{Thread.CurrentThread.Name} начал  работу.\r\n");
+    Console.WriteLine($"------{Thread.CurrentThread.Name} начал  работу.\r\n");
     Thread.Sleep(1000); // Выполнение некоторой работы...
-    //Console.WriteLine($"------{Thread.CurrentThread.Name} закончил  работу.\r\n");
+    Console.WriteLine($"------{Thread.CurrentThread.Name} закончил  работу.\r\n");
 }
 
 void Function()

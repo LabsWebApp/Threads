@@ -23,8 +23,8 @@ for (int i = 1; i <= 8; i++)
     Thread thread = new Thread(new ParameterizedThreadStart(Work!));
     thread.Start(i);
 }
-//Thread.Sleep(2000);
-//pool.Release(2);
+Thread.Sleep(2000);
+pool.Release(2);
 
 // Задержка.
 Console.ReadKey();

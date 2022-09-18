@@ -80,19 +80,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08_SemaphoreSlim", "Synchro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09_ManualResetEvent", "Synchronisation\09_ManualResetEvent\09_ManualResetEvent.csproj", "{A760519A-C5A1-4B77-879A-2121821B15D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_ManualResetEventSlim", "Synchronisation\10_ManualResetEventSlim\10_ManualResetEventSlim.csproj", "{66B7C6CC-C5B1-4360-9B5B-1B01EC30338B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_ManualResetEventSlim", "Synchronisation\10_ManualResetEventSlim\10_ManualResetEventSlim.csproj", "{66B7C6CC-C5B1-4360-9B5B-1B01EC30338B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_ManualresetEventSlimPerformance", "Synchronisation\11_ManualresetEventSlimPerformance\11_ManualresetEventSlimPerformance.csproj", "{5F55E5B3-1C4D-483F-BBBF-F0DCBF15BD53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_ManualresetEventSlimPerformance", "Synchronisation\11_ManualresetEventSlimPerformance\11_ManualresetEventSlimPerformance.csproj", "{5F55E5B3-1C4D-483F-BBBF-F0DCBF15BD53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_RegistredWaitHandle", "Synchronisation\12_RegistredWaitHandle\12_RegistredWaitHandle.csproj", "{66977001-2DB2-44FA-9BD6-A79763E77D9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_RegistredWaitHandle_107", "Synchronisation\12_RegistredWaitHandle\12_RegistredWaitHandle_107.csproj", "{66977001-2DB2-44FA-9BD6-A79763E77D9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_GlobalEvent", "Synchronisation\13__GlobalEvent\13_GlobalEvent.csproj", "{F4D88188-4A6E-4A78-A129-3143A20D890F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_GlobalEvent", "Synchronisation\13__GlobalEvent\13_GlobalEvent.csproj", "{F4D88188-4A6E-4A78-A129-3143A20D890F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_Timer", "Synchronisation\14_Timer\14_Timer.csproj", "{2FBE5213-0AB6-4BF7-B181-4BFFAFBFF7B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14_Timer", "Synchronisation\14_Timer\14_Timer.csproj", "{2FBE5213-0AB6-4BF7-B181-4BFFAFBFF7B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15_WaitHandle", "Synchronisation\15_WaitHandle\15_WaitHandle.csproj", "{FD835378-BFF8-4FAE-B346-F67AD8CF306E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "15_WaitHandle", "Synchronisation\15_WaitHandle\15_WaitHandle.csproj", "{FD835378-BFF8-4FAE-B346-F67AD8CF306E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConcurrentCollections", "ConcurrentCollections", "{B640FAAB-637D-4F86-9661-AB6F1CA05E8A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_ConcurrentCollections", "05_ConcurrentCollections", "{B640FAAB-637D-4F86-9661-AB6F1CA05E8A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_ConcurrentBagQueueStack", "ConcurrentCollections\01_ConcurrentBag\01_ConcurrentBagQueueStack.csproj", "{39636DB7-3FBD-46EE-B77D-FB3318CB4945}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_BlockingCollection", "ConcurrentCollections\02_BlockingCollection\02_BlockingCollection.csproj", "{7975A8E3-A13E-4E00-9BF1-1BC16A99EBC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_ConcurrentDictionary", "ConcurrentCollections\03_ConcurrentDictionary\03_ConcurrentDictionary.csproj", "{EF8A04A3-B6F8-4B05-9059-D9E2D1E84100}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -240,6 +246,18 @@ Global
 		{FD835378-BFF8-4FAE-B346-F67AD8CF306E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD835378-BFF8-4FAE-B346-F67AD8CF306E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD835378-BFF8-4FAE-B346-F67AD8CF306E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39636DB7-3FBD-46EE-B77D-FB3318CB4945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39636DB7-3FBD-46EE-B77D-FB3318CB4945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39636DB7-3FBD-46EE-B77D-FB3318CB4945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39636DB7-3FBD-46EE-B77D-FB3318CB4945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7975A8E3-A13E-4E00-9BF1-1BC16A99EBC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7975A8E3-A13E-4E00-9BF1-1BC16A99EBC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7975A8E3-A13E-4E00-9BF1-1BC16A99EBC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7975A8E3-A13E-4E00-9BF1-1BC16A99EBC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF8A04A3-B6F8-4B05-9059-D9E2D1E84100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF8A04A3-B6F8-4B05-9059-D9E2D1E84100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF8A04A3-B6F8-4B05-9059-D9E2D1E84100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF8A04A3-B6F8-4B05-9059-D9E2D1E84100}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -284,6 +302,9 @@ Global
 		{F4D88188-4A6E-4A78-A129-3143A20D890F} = {CA19C99B-A28E-4693-AE21-3431BF6CEA73}
 		{2FBE5213-0AB6-4BF7-B181-4BFFAFBFF7B4} = {CA19C99B-A28E-4693-AE21-3431BF6CEA73}
 		{FD835378-BFF8-4FAE-B346-F67AD8CF306E} = {CA19C99B-A28E-4693-AE21-3431BF6CEA73}
+		{39636DB7-3FBD-46EE-B77D-FB3318CB4945} = {B640FAAB-637D-4F86-9661-AB6F1CA05E8A}
+		{7975A8E3-A13E-4E00-9BF1-1BC16A99EBC3} = {B640FAAB-637D-4F86-9661-AB6F1CA05E8A}
+		{EF8A04A3-B6F8-4B05-9059-D9E2D1E84100} = {B640FAAB-637D-4F86-9661-AB6F1CA05E8A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DFADBF70-59BB-428F-B959-BCC77901B387}
