@@ -2,7 +2,7 @@
 // Особенности:
 //  1. Bounding
 //  2. Blocking
-// Обе функции помогают нам реализовать модель производитель-потребитель.
+// Обе функции помогают нам реализовать паттерн производитель-потребитель.
 
 using System.Collections.Concurrent;
 using static System.Console;
@@ -60,9 +60,9 @@ ReadKey();
 WriteLine("\nAddToAny, TryAddToAny, TakeFromAny, TryTakeFromAny");
 BlockingCollection<int>[] producers =
 {
-    new(boundedCapacity: 10),
-    new(boundedCapacity: 10),
-    new(boundedCapacity: 10)
+    new(new ConcurrentBag<int>(), boundedCapacity: 10),
+    new(new ConcurrentQueue<int>(), boundedCapacity: 10),
+    new(new ConcurrentStack<int>(), boundedCapacity: 10)
 };
 
 new Thread(() =>
@@ -103,6 +103,7 @@ while (!producers[0].IsCompleted ||
     if (element != default) WriteLine(element);
 }
 
+WriteLine(new string('-', 20));
 foreach (var item in producers) WriteLine(item.Count);
 
 ReadKey();

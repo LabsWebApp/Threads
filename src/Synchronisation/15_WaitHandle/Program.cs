@@ -19,23 +19,22 @@ void Task2(object state)
     auto.Set();
 }
 
-DateTime dateTime = DateTime.Now;
-
 Console.WriteLine("Главный поток ожидает завершения ОБЕИХ задач.\n");
+
+DateTime dateTime = DateTime.Now;
 
 // Очередь для двух задач в двух разных потоках. 
 ThreadPool.QueueUserWorkItem(new WaitCallback(Task1!), events[0]);
 ThreadPool.QueueUserWorkItem(Task2!, events[1]);
 
-// Ожидание пока все задачи завершаться.
+// Ожидание пока все WaitHandle из массива не перейдут в сигнальное состояние.
 WaitHandle.WaitAll(events);
 
 // Время отображаемое ниже, должно совпадать с продолжительностью выполнения самой длинной задачи.
 Console.WriteLine($"Обе задачи завершены (время ожидания = {(DateTime.Now - dateTime).TotalMilliseconds})");
 
-dateTime = DateTime.Now;
-
 Console.WriteLine("\nОжидание завершения одной из задач.");
+dateTime = DateTime.Now;
 ThreadPool.QueueUserWorkItem(new WaitCallback(Task1!), events[0]);
 ThreadPool.QueueUserWorkItem(Task2!, events[1]);
 

@@ -19,8 +19,8 @@ class Program
     // Ключевое слово гарантирует. что при чтении и записи  манипуляция будет происходить непосредственно с памятью,
     // а не со значениями, которые кэшированы в регистры процессора.
 
-    static volatile object stop = true; // Без JIT оптимизации.
-   //static bool stop; // С JIT оптимизацией.
+    static volatile bool stop; // Без JIT оптимизации.
+    //static bool stop; // С JIT оптимизацией.
 
     static void Main()
     {
@@ -33,6 +33,7 @@ class Program
         stop = true;
         Console.WriteLine("Main: ожидание завершения потока");
         thread.Join();
+
     }
 
     private static void Worker(object o)
@@ -46,7 +47,7 @@ class Program
         // ВНИМАНИЕ! Оптимизация не производиться в режиме отладки (DEBUG).
         int x = 0;
 
-        while (!(bool)stop)
+        while (!stop)
         {
             //checked
             {

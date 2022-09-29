@@ -15,6 +15,7 @@ class Program
         Thread.Sleep(2000);
 
         Thread.VolatileWrite(ref stop, 1);
+        //stop = 1;
 
         Console.WriteLine("Main: ожидание завершения потока.");
         t.Join();

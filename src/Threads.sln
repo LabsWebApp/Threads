@@ -84,7 +84,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_ManualResetEventSlim", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_ManualresetEventSlimPerformance", "Synchronisation\11_ManualresetEventSlimPerformance\11_ManualresetEventSlimPerformance.csproj", "{5F55E5B3-1C4D-483F-BBBF-F0DCBF15BD53}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_RegistredWaitHandle_107", "Synchronisation\12_RegistredWaitHandle\12_RegistredWaitHandle_107.csproj", "{66977001-2DB2-44FA-9BD6-A79763E77D9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_RegistredWaitHandle", "Synchronisation\12_RegistredWaitHandle\12_RegistredWaitHandle.csproj", "{66977001-2DB2-44FA-9BD6-A79763E77D9F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_GlobalEvent", "Synchronisation\13__GlobalEvent\13_GlobalEvent.csproj", "{F4D88188-4A6E-4A78-A129-3143A20D890F}"
 EndProject
@@ -96,11 +96,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_ConcurrentCollections", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_ConcurrentBagQueueStack", "ConcurrentCollections\01_ConcurrentBag\01_ConcurrentBagQueueStack.csproj", "{39636DB7-3FBD-46EE-B77D-FB3318CB4945}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_BlockingCollection", "ConcurrentCollections\02_BlockingCollection\02_BlockingCollection.csproj", "{7975A8E3-A13E-4E00-9BF1-1BC16A99EBC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_BlockingCollection_007", "ConcurrentCollections\02_BlockingCollection\02_BlockingCollection_007.csproj", "{7975A8E3-A13E-4E00-9BF1-1BC16A99EBC3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_ConcurrentDictionary", "ConcurrentCollections\03_ConcurrentDictionary\03_ConcurrentDictionary.csproj", "{EF8A04A3-B6F8-4B05-9059-D9E2D1E84100}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_WaitPulse", "Threads\Monitor\04_WaitPulse\04_WaitPulse.csproj", "{5D3875CA-855B-428B-8C9E-EAF0EAC5CAB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04_WaitPulse", "Threads\Monitor\04_WaitPulse\04_WaitPulse.csproj", "{5D3875CA-855B-428B-8C9E-EAF0EAC5CAB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

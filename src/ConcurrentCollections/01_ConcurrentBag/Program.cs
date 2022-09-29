@@ -4,7 +4,7 @@ const int lenght = 5;
 WaitHandle[] waitHandles = new WaitHandle[lenght];
 Random random = new(DateTime.Now.Millisecond);
 
-// ConcurrentBag потокобезопасное хранение данных по поведению микс из хеш-таблички и стека
+// ConcurrentBag потокобезопасное хранение данных по поведению, микс из хеш-таблички и очереди
 
 Console.WriteLine("ConcurrentBag");
 ConcurrentBag<int> bag = new ConcurrentBag<int>();
@@ -57,7 +57,7 @@ for (int i = 0; i < lenght; i++)
 }
 WaitHandle.WaitAll(waitHandles);
 
-Console.WriteLine(new string('_', 20));
+Console.WriteLine(new string('_', 20)); 
 
 while (queue.TryDequeue(out int x)) Console.WriteLine($"Take: {x}");
 

@@ -1,5 +1,4 @@
-﻿// ManualResetEventSlim - изначально используется SpinWait блокировка на 1000 итераций, 
-// после чего происходит синхронизация с помощью объекта ядра.
+﻿// ManualResetEventSlim - изначально используется SpinWait блокировка на 1000 итераций
 ManualResetEventSlim slim = new ManualResetEventSlim(false, 1000);
 
 void Function()

@@ -11,6 +11,7 @@ internal class AutoResetEventSample : IDisposable
         new Thread(workers.Worker2).Start();
         new Thread(workers.Worker3).Start();
 
+        Thread.Sleep(1000);
         _autoReset.Set();
         Thread.Sleep(1000);
         _autoReset.Set();

@@ -24,7 +24,7 @@ thread.Start();
 var current = Thread.CurrentThread;
 //Console.WriteLine(current.ThreadState);
 // Ожидание первичным потоком, завершения работы вторичного потока.
-//thread.Join();      //TODO Снять комментарий.
+thread.Join(100);      //TODO Снять комментарий.
 //Console.WriteLine(current.ThreadState);
 
 Console.ForegroundColor = ConsoleColor.DarkRed;

@@ -1,6 +1,6 @@
 ﻿//https://en.wikipedia.org/wiki/Thread_pool#/media/File:Thread_pool.svg
 
-static void Task1(Object state)
+static void Task1(object _)
 {
     Thread.CurrentThread.Name = "1ая нить";
     Console.WriteLine($"Поток: {Thread.CurrentThread.Name}, ID: {Thread.CurrentThread.ManagedThreadId}");
@@ -8,7 +8,7 @@ static void Task1(Object state)
     Thread.Sleep(500);
 }
 
-static void Task2(Object state)
+static void Task2(object _)
 {
     Thread.CurrentThread.Name = "2ая нить";
     Console.WriteLine($"Поток: {Thread.CurrentThread.Name}, ID: {Thread.CurrentThread.ManagedThreadId}");
@@ -30,14 +30,21 @@ static void ShowThreadInfo()
     Console.WriteLine($"-------------Доступно потоков ввода-вывода в пуле: {availableIOThreads} из {maxIOThreads}\n");
 }
 
+//ThreadPool.SetMaxThreads(2048, 999);
+
 Console.WriteLine("Начало работы программы");
 ShowThreadInfo();
 Console.WriteLine("Запускаем Task1 в потоке из пула потоков");
-ThreadPool.QueueUserWorkItem(new WaitCallback(Task1!));
+
+WaitCallback callBack = new WaitCallback(Task1!);
+ThreadPool.QueueUserWorkItem(callBack);
 ShowThreadInfo();
+
 Console.WriteLine("Запускаем Task2 в потоке из пула потоков");
-Thread.Sleep(1500);
+//Thread.Sleep(1500);
+
 ThreadPool.QueueUserWorkItem(Task2!);
+
 ShowThreadInfo();
 Console.WriteLine("Главный поток.");
 

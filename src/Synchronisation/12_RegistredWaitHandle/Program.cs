@@ -2,11 +2,11 @@
 {
     Console.WriteLine("Start Signal");
     Thread.Sleep(3000);
-    Console.WriteLine("Signal");
+    Console.WriteLine("Finish Signal");
 }
 
-AutoResetEvent auto = new AutoResetEvent(false);
-WaitOrTimerCallback callback = new WaitOrTimerCallback(CallbackMethod);
+using AutoResetEvent auto = new AutoResetEvent(false);
+WaitOrTimerCallback callback = new WaitOrTimerCallback(CallbackMethod!);
 
 // auto - от кого ждать сигнал
 // callback - что выполнять
@@ -14,11 +14,8 @@ WaitOrTimerCallback callback = new WaitOrTimerCallback(CallbackMethod);
 // 2000 - интервал между вызовами Callback метода
 // если true - вызвать Callback метод один раз. Если false - вызывать Callback метод с интервалом.
 // ThreadPool.RegisterWaitForSingleObject(auto, callback, null, Timeout.Infinite, true);
-
 var waitHandle = ThreadPool
     .RegisterWaitForSingleObject(auto, callback, null, 2000, false);
-//var waitHandle = ThreadPool
-//    .RegisterWaitForSingleObject(auto, callback, null, 2000, false);
 
 Console.WriteLine("S - сигнал, Q - выход");
 

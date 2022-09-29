@@ -12,8 +12,8 @@ class Program
     // 1. Запоминает какой поток им владеет. ReleaseMutex не может вызвать поток, который не владеет мьютексом.
     // 2. Управляет рекурсивным счетчиком, указывающим, сколько раз поток-владелец уже владел объектом.
     
-    //private static readonly Mutex Mutex1 = new Mutex(false, "MutexSample:AAED7056-380D-412E-9608-763495211EA8");
-    private static readonly Mutex Mutex1 = new Mutex();
+    private static readonly Mutex Mutex1 = new Mutex(false, "MutexSample:AAED7056-380D-412E-9608-763495211EA8");
+    //private static readonly Mutex Mutex1 = new Mutex();
 
     static void Main()
     {
@@ -38,8 +38,8 @@ class Program
         bool myMutex = Mutex1.WaitOne();
 
         Console.WriteLine($"Поток {Thread.CurrentThread.Name} зашел в защищенную область.");
-        Console.WriteLine($"Поток {Thread.CurrentThread.Name} блокирует сам ? - {myMutex}.");
-        Thread.Sleep(2000);
+        //Console.WriteLine($"Поток {Thread.CurrentThread.Name} блокирует сам ? - {myMutex}.");
+        Thread.Sleep(1000);
         Console.WriteLine($"Поток {Thread.CurrentThread.Name}  покинул защищенную область.\n");
         Mutex1.ReleaseMutex();
     }

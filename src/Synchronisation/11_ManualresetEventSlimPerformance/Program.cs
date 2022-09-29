@@ -1,7 +1,7 @@
 ﻿// работаем с ManualResetEventSlim
 using System.Diagnostics;
 
-const int iterations = 10000000;
+const int iterations = 10_000_000;
 void MethodSlim(ManualResetEventSlim mre, bool value)
 {
     //в цикле повторяем действие достаточно большое число раз
@@ -35,15 +35,15 @@ for (int i = 0; i < COUNT; i++)
     Stopwatch sw = Stopwatch.StartNew();
 
     //запускаем установку в потоке пула
-    ThreadPool.QueueUserWorkItem((obj) =>
+    ThreadPool.QueueUserWorkItem(_ =>
     {
-        //MethodSlim(mres, true);
-        Method(mre, true);
+        MethodSlim(mres, true);
+        //Method(mre, true);
         mres.Set();
     });
     //запускаем сброс в основном потоке
-    //MethodSlim(mres, false);
-    Method(mre, false);
+    MethodSlim(mres, false);
+    //Method(mre, false);
 
     //Ждём, пока выполнится поток пула
     mres.Wait();

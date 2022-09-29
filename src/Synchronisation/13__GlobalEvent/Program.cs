@@ -2,7 +2,10 @@
 // false - несигнальное состояние.
 // ManualReset - тип события.
 // GlobalEvent - имя по которому все приложения будут слушать событие.
-EventWaitHandle manual = new EventWaitHandle(false, EventResetMode.ManualReset, "GlobalEvent::GUID");
+EventWaitHandle manual = new EventWaitHandle(
+    false, 
+    EventResetMode.ManualReset, 
+    "GlobalEvent::E721D8D2-2BAC-4259-AB65-214D37408AA7");
 
 void Function()
 {

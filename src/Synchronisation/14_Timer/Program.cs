@@ -1,8 +1,8 @@
-﻿AutoResetEvent auto = new AutoResetEvent(false);
+﻿using AutoResetEvent auto = new AutoResetEvent(false);
 StatusChecker checker = new StatusChecker(15);
 
 // Представляет метод, обрабатывающий вызовы от события Timer.
-TimerCallback checkStatus = new TimerCallback(checker.CheckStatus);
+TimerCallback checkStatus = new TimerCallback(checker.CheckStatus!);
 
 Console.WriteLine("Создание таймера.\n");
 
@@ -27,9 +27,9 @@ Console.WriteLine("\nИзменение периода на 1/2 секунды.\
 
 // 0 - Количество времени, в миллисекундах,
 // которое должно пройти до вызова метода обратного вызова при создании объекта Timer.
-// 500 - Временной интервал в миллисекундах между вызовами метода обратного вызова,
+// 1000 - Временной интервал в миллисекундах между вызовами метода обратного вызова,
 // определенный в конструкторе объекта Timer.
-timer.Change(0, 500);
+timer.Change(5000, 1000);
 
 auto.WaitOne(15000);
 
@@ -44,10 +44,11 @@ class StatusChecker
     private readonly int _maxCount;
     private int _invokeCount;
 
-    public StatusChecker(int maxCount) => this._maxCount = maxCount;
+    public StatusChecker(int maxCount) => _maxCount = maxCount;
 
     public void CheckStatus(Object stateInfo)
     {
+        Console.WriteLine($"Поток {Thread.CurrentThread.ManagedThreadId} начал работу.");
         Thread.Sleep(10000);
         // Учет вызовов метода.
         Console.WriteLine($"Проверка статуса {++_invokeCount}.");
