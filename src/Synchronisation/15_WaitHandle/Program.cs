@@ -1,4 +1,9 @@
-﻿WaitHandle[] events = { new AutoResetEvent(false), new AutoResetEvent(false) };
+﻿WaitHandle[] events =
+{
+    new AutoResetEvent(false), 
+    new ManualResetEvent(false)
+};
+
 Random random = new Random();
 
 void Task1(object state)

@@ -57,7 +57,7 @@ thread2.Join();
 
 ReadKey();
 
-WriteLine("\nAddToAny, TryAddToAny, TakeFromAny, TryTakeFromAny");
+WriteLine("\nAddToAny, TryAddToAny, TakeFromAny, TryTakeFromAny [Producer-Consumer]");
 BlockingCollection<int>[] producers =
 {
     new(new ConcurrentBag<int>(), boundedCapacity: 10),
